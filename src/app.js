@@ -1,4 +1,4 @@
-/*global require, __dirname*/
+/*global require, __dirname,process*/
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode');
 const weatherInfo = require('./utils/weatherInfo');
 
 const app = express();
+// eslint-disable-next-line no-process-env
 const port = process.env.PORT || 3000;
 
 //All paths
