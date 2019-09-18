@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode');
 const weatherInfo = require('./utils/weatherInfo');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //All paths
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -90,7 +91,7 @@ app.get('*', (req, res) => {
 });
 
 //Run the server on given port
-app.listen(3000, () => {
+app.listen(port, () => {
     // eslint-disable-next-line no-console
-    console.log("Server up and running.");
+    console.log("Server up and running on port " + port + ".");
 });
