@@ -1,0 +1,1 @@
+A node js app to search for weather forecast for a given location.
