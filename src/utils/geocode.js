@@ -13,7 +13,7 @@ module.exports = (address, callback) => {
             callback(error)
         } else if (!responseBody.features || !responseBody.features[0] || !responseBody.features[0].center || responseBody.features[0].center.length < 2) {
             // eslint-disable-next-line callback-return
-            callback(new Error("info not available for geocode"));
+            callback(new Error("Info not available"));
         }else {
             const geocode = responseBody.features[0].center;
             const location = responseBody.features[0].place_name;

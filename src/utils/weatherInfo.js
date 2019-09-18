@@ -13,7 +13,7 @@ module.exports = (latitude, longitude, callback) => {
             callback(error)
         } else if (!responseBody.daily || !responseBody.daily.data || !responseBody.currently) {
             // eslint-disable-next-line callback-return
-            callback(new Error("info not available for weather"));
+            callback(new Error("Info not available"));
         } else {
             const todaysWeather = responseBody.daily.data[0];
             const currentWeather = responseBody.currently;
@@ -22,7 +22,7 @@ module.exports = (latitude, longitude, callback) => {
                 // eslint-disable-next-line callback-return
                 callback(null, forecast);
             } else {
-                log("no callback provided");
+                log("No callback provided");
             }
         }
     });
