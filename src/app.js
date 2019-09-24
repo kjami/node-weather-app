@@ -7,7 +7,7 @@ const weatherInfo = require('./utils/weatherInfo');
 
 const app = express();
 // eslint-disable-next-line no-process-env
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 //All paths
 const publicDirectoryPath = path.join(__dirname, '../public');
